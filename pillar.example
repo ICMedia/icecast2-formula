@@ -1,0 +1,13 @@
+icecast2:
+  config:
+    authentication:
+      source-password: test123
+      relay-password: super123
+      admin-user: admin
+      admin-password: admin123
+    listen-socket:
+      port: 8000
+    mount:
+      mount-name: /example-complex.ogg
+      username: hackme
+      password: hackme
