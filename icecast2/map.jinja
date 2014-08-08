@@ -1,9 +1,10 @@
 {% set icecast2 = salt['grains.filter_by']({
-    'default': {
+    'Debian': {
         'pkg': 'icecast2',
         'service': 'icecast2',
         'config': '/etc/icecast2/icecast.xml',
         'user': 'icecast2',
         'group': 'icecast',
+        'defaults': '/etc/default/icecast2',
     },
 }, merge=salt['pillar.get']('icecast2:lookup')) %}
