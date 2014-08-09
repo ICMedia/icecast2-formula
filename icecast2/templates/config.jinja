@@ -1,4 +1,4 @@
-{%- set config = pillar.get('icecast2:config', {}) -%}
+{%- set config = salt['pillar.get']('icecast2:config', {}) -%}
 
 {%- macro option(d, key, default) -%}
   {%- set value = d.get(key, default) -%}
