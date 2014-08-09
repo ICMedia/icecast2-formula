@@ -14,6 +14,9 @@ icecast2-running:
     - running
     - name: {{ icecast2.service }}
     - enable: True
+    # avoid restarting icecast2 if at all possible
+    - reload: True
+    - sig: {{ icecast2.exe }}
     - watch:
       - pkg: {{ icecast2.pkg }}
       - file: {{ icecast2.config }}

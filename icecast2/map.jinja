@@ -6,5 +6,6 @@
         'user': 'icecast2',
         'group': 'icecast',
         'defaults': '/etc/default/icecast2',
+        'exe': '/usr/bin/icecast2',
     },
 }, merge=salt['pillar.get']('icecast2:lookup')) %}
